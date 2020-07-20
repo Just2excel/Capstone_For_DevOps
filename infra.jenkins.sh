@@ -20,6 +20,6 @@ sudo chmod u+x /kubectl/./kubectl
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 sudo mv /tmp/eksctl /usr/local/bin
 eksctl version
-eksctl create cluster --name amycapstonecluster --version 1.16 --nodegroup-name standard-workers --node-type t2.micro --nodes 2 --nodes-min 1 --nodes-max 3 --node-ami auto --region us-east-2 --zones us-east-2a --zones us-east-2b --zones us-east-2c
+eksctl create cluster --name jaycapstonecluster --version 1.16 --nodegroup-name standard-workers --node-type t2.micro --nodes 2 --nodes-min 1 --nodes-max 3 --node-ami auto --region us-east-2 --zones us-east-2a --zones us-east-2b --zones us-east-2c
 kubectl get svc
 aws eks --region us-east-2 update-kubeconfig --name capstonecluster
