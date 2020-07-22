@@ -34,7 +34,7 @@ pipeline {
 					sh '''
 						sudo -s
 						kubectl config get-contexts
-						kubectl config use-context  arn:aws:eks:us-east-2:493716690734:cluster/capstonecluster
+						kubectl config use-context  arn:aws:eks:us-east-2:921893937158:cluster/jaycapstonecluster
 					'''
 				}
 			}
