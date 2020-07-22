@@ -12,7 +12,7 @@ pipeline {
 			steps {
 				withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerhub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
 					sh '''
-						sudo docker build -t Just2excel/capstonecluster .
+						sudo docker build -t just2excel/capstonecluster .
 					'''
 				}
 			}
@@ -23,7 +23,7 @@ pipeline {
 				withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerhub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
 					sh '''
 						sudo docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD 
-						sudo docker push Just2excel/capstonecluster
+						sudo docker push just2excel/capstonecluster
 					'''
 				}
 			}
