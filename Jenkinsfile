@@ -32,6 +32,7 @@ pipeline {
 			steps {
 				withAWS(region:'us-east-2', credentials:'aws-credentials') {
 					sh '''
+						sudo -su jenkins
 						kubectl config get-contexts
 						kubectl config use-context  arn:aws:eks:us-east-2:921893937158:cluster/jaycapstonecluster
 					'''
