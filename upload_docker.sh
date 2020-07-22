@@ -7,7 +7,7 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-export dockerpath="Just2excel/capstonecluster"
+export dockerpath="Just2excel/jaycapstonecluster"
 
 # Step 2:
 # Authenticate & tag
