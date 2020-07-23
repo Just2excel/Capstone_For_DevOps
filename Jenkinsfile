@@ -34,8 +34,9 @@ pipeline {
 					sh '''
 						sudo su
 						whoami
-						kubectl get svc
+						aws eks --region us-east-1 update-kubeconfig --name capstonecluster
 						kubectl config get-contexts
+						kubectl get svc
 						kubectl config use-context  arn:aws:eks:us-east-1:493716690734:cluster/capstonecluster
 					'''
 				}
@@ -44,7 +45,7 @@ pipeline {
 
 		stage('Deploy blue container') {
 			steps {
-				withAWS(region:'us-east-2', credentials:'aws-credentials') {
+				withAWS(region:'us-east-1', credentials:'aws-credentials') {
 					sh '''
 						kubectl apply -f ./blue-controller.json
 					'''
@@ -54,7 +55,7 @@ pipeline {
 
 		stage('Deploy green container') {
 			steps {
-				withAWS(region:'us-east-2', credentials:'aws-credentials') {
+				withAWS(region:'us-east-1', credentials:'aws-credentials') {
 					sh '''
 						kubectl apply -f ./green-controller.json
 					'''
@@ -64,7 +65,7 @@ pipeline {
 
 		stage('Create the service in the cluster, redirect to blue') {
 			steps {
-				withAWS(region:'us-east-2', credentials:'aws-credentials') {
+				withAWS(region:'us-east-1', credentials:'aws-credentials') {
 					sh '''
 						kubectl apply -f ./blue-service.json
 					'''
@@ -80,7 +81,7 @@ pipeline {
 
 		stage('Create the service in the cluster, redirect to green') {
 			steps {
-				withAWS(region:'us-east-2', credentials:'aws-credentials') {
+				withAWS(region:'us-east-1', credentials:'aws-credentials') {
 					sh '''
 						kubectl apply -f ./green-service.json
 					'''
