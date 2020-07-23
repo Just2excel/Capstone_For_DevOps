@@ -10,9 +10,9 @@ This project shows skills of the following;
 * Building Docker containers in pipelines
 * Blueocean on Jenkins
 
-![alt text](https://github.com/Just2excel/Capstone_For_DevOps/blob/master/screenshots/pipelinescreenshot.JPG?raw=true)
+![alt text](https://github.com/Just2excel/Capstone_For_DevOps/blob/master/screenshots/greenpipeline.JPG?raw=true)
 
 ---
 ## Static Website
 
-![alt text](https://github.com/Just2excel/Capstone_For_DevOps/blob/master/screenshots/tempsnip.png?raw=true)
+![alt text](https://github.com/Just2excel/Capstone_For_DevOps/blob/master/screenshots/loadbalancer.png?raw=true)
