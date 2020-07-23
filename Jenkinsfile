@@ -33,6 +33,8 @@ pipeline {
 				withAWS(region:'us-east-1', credentials:'aws-credentials') {
 					sh '''
 						sudo su
+						whoami
+						kubectl get svc
 						kubectl config get-contexts
 						kubectl config use-context  arn:aws:eks:us-east-1:493716690734:cluster/capstonecluster
 					'''
