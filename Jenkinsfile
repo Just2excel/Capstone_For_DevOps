@@ -33,7 +33,7 @@ pipeline {
 				withAWS(region:'us-east-1', credentials:'aws-credentials') {
 					sh '''
 						sudo su
-						sudo kubectl describe service
+						whoami
 						aws eks --region us-east-1 update-kubeconfig --name capstonecluster
 						kubectl config get-contexts
 						kubectl get svc
