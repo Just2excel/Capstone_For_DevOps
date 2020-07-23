@@ -11,8 +11,8 @@ export dockerpath="just2excel/capstonecluster"
 
 # Step 2:
 # Authenticate & tag
-docker login --username just2excel
-docker tag just2excelcapstonecluster $dockerpath
+docker login --username just2excel --password Saviour14
+docker tag capstonecluster $dockerpath
 echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
