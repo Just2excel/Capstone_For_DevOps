@@ -22,7 +22,7 @@
             "containers":[
                {
                   "name":"green",
-                  "image":"Just2excel/capstonecluster",
+                  "image":"just2excel/capstonecluster",
                   "ports":[
                      {
                         "name":"http-server",
